@@ -1,0 +1,60 @@
+//---------------------
+//	     Palette
+//---------------------
+$primary-color: #cc3333;
+
+//---------------------
+//	      Styles
+//---------------------
+// Global
+$section-padding-xs: 75px;
+
+// Navigation
+$navigation-height-xs: 90px;
+$navigation-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+$navigation-background-color: rgb(250, 250, 250);
+
+// Section 0
+$section-0-height-xs: 400px;
+$section-0-background-image: url("../images/section-0-background-6.jpg");
+
+//---------------------
+//	   Typography
+//---------------------
+// Global
+$main-font-family: "Source Code Pro", cursive;
+$main-font-weight: 200;
+$h1-font-size: 2.3em;
+$h1-font-weight: 300;
+$h1-letter-spacing: 5px;
+$h3-letter-spacing: 3px;
+$main-letter-spacing: 5px;
+$subheader-font-color: rgb(100, 100, 100);
+$subheader-font-weight: 200;
+
+// Navigation
+$navigation-font-color: rgb(35, 35, 35);
+$navigation-letter-spacing: 0px;
+$navigation-font-weight: 400;
+
+// Section 0
+$section-0-h1-font-family: "Source Code Pro", cursive;
+$section-0-h1-color: rgb(240, 240, 240);
+$section-0-h1-font-size-xs: 2.4em;
+$section-0-h1-font-weight: 300;
+$section-0-h1-text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8);
+$section-0-p-font-size: 0.8em;
+$section-0-p-letter-spacing: -1px;
+$section-0-p-font-color: rgb(250, 250, 250);
+$section-0-p-font-weight: 100;
+$section-0-p-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.9);
+
+// Section 1
+$section-1-h3-color: rgb(75, 75, 75); 
+$section-1-h3-font-weight: 400;
+$section-1-h3-font-size: 1.4em;
+$section-1-h4-color: rgb(25, 25, 25);
+$section-1-h4-font-weight: 300;
+$section-1-h4-font-size: 1.15em;
+$section-1-p-font-size: 0.8em;
+$section-1-p-font-weight: 300;

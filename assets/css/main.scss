@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900');
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+//---------------------
+//	     Global
+//---------------------
+body, html {
+	background: rgb(250, 250, 250);
+	font-family: $main-font-family;
+	font-weight: $main-font-weight;
+}
+
+//---------------------
+//	   Navigation
+//---------------------
+#navigation {
+	width: 100vw;
+	height: $navigation-height-xs;
+	background: $navigation-background-color;
+	position: fixed;
+	box-shadow: $navigation-box-shadow;
+	padding-top: 10px;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	.brand {
+		img {
+			width: 40px;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.nav {
+		margin-top: 10px;
+		ul {
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+			margin-right: 5px;
+			white-space: nowrap;
+			a {
+				font-size: 0.7em;
+				white-space: nowrap;
+				color: $navigation-font-color;
+				letter-spacing: $navigation-letter-spacing;
+				font-weight: $navigation-font-weight;
+			}
+			i {
+				font-size: 1.2em;
+				color: $navigation-font-color;
+			}
+		}
+	}
+}
+
+.shopping-cart {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: rgb(250, 250, 250);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+	padding-top: 12px;
+	padding-left: 12px;
+	z-index: 90;
+	span {
+		font-size: 1.5em;
+	}
+	div {
+		width: 16px;
+		height: 16px;
+		padding-left: 5px;
+		padding-top: 3px;
+		border-radius: 8px;
+		background: $primary-color;
+		position: absolute;
+		z-index: 10;
+		margin-left: 16px;
+		margin-top: -5px;
+		color: rgb(250, 250, 250);
+		font-family: sans-serif;
+		font-size: 0.7em;
+	}
+}
+
+//---------------------
+//	   	  Body
+//---------------------
+// Section 0
+#section-0 {
+	height: $section-0-height-xs;
+	width: 100vw;
+	margin-top: $navigation-height-xs;
+	background-image: $section-0-background-image;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	img.graphic-0 {
+		width: 200px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.7));
+	}
+	.section-0-header {
+		text-align: center;
+		z-index: 10;
+		position: relative;
+		transform: translate(0, -50%);
+		top: 50%;
+		div {
+			text-align: left;
+			display: inline-block;
+			h1 {
+				position: relative;
+				font-family: $section-0-h1-font-family;
+				color: $section-0-h1-color;
+				font-size: $section-0-h1-font-size-xs;
+				font-weight: $section-0-h1-font-weight;
+				text-shadow: $section-0-h1-text-shadow;
+			}
+		}
+	}
+	.section-0-footer {
+		position: absolute;
+		bottom: 0;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		width: 100%;
+		text-align: center;
+		p {
+			font-size: $section-0-p-font-size;
+			letter-spacing: $section-0-p-letter-spacing;
+			color: $section-0-p-font-color;
+			font-weight: $section-0-p-font-weight;
+			text-shadow: $section-0-p-text-shadow;
+		}
+	}
+}
+
+// Section 1
+#section-1 {
+	padding-top: $section-padding-xs;
+	padding-bottom: $section-padding-xs;
+	h1 {
+		font-size: $h1-font-size;
+		text-align: center;
+		font-weight: $h1-font-weight;
+		letter-spacing: $h1-letter-spacing;
+	}
+	.menu-select {
+		text-align: center;
+		margin-top: 10px;
+		p {
+			color: $subheader-font-color;
+			font-weight: $subheader-font-weight;
+			select {
+				border: none !important;
+				background: none !important;
+				width: 75px;
+				padding-right: 0 !important;
+			}
+			select option {
+				color: red !important;
+			}
+			i {
+				margin-left: -25px;
+				pointer-events: none;
+			}
+		}
+	}
+	.menus-wrapper {
+		margin-top: 50px;
+		.menus {
+			margin-top: 5px;
+			line-height: 16px;
+		}
+		.menu-option {
+			margin-top: 25px;
+		}
+		h3 {
+			color: $section-1-h3-color;
+			font-weight: $section-1-h3-font-weight;
+			letter-spacing: $h3-letter-spacing;
+			font-size: $section-1-h3-font-size;
+		}
+		h4 {
+			color: $section-1-h4-color;
+			font-weight: $section-1-h4-font-weight;
+			font-size: $section-1-h4-font-size;
+			letter-spacing: $h3-letter-spacing;
+		}
+		p {
+			font-size: $section-1-p-font-size;
+			font-weight: $section-1-p-font-weight;
+		}
+		div.add-to-cart-btn {
+			display: inline-block;
+			float: right;
+			position: relative;
+			top: -2px;
+			.price {
+				position: relative;
+				left: 10px;
+				top: -1px;
+			}
+			button {
+				background: none !important;
+				border: none !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+			button i {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+
