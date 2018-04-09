@@ -1,0 +1,390 @@
+[{
+	"id": 0,
+	"type": "rolls",
+	"name": "Cali Roll",
+	"price": "5.25",
+	"description": "'Crab', cucumber, and avocado (Regular or spicy).",
+	"source": "assets/resources/rolls/0"
+},
+{
+	"id": 1,
+	"type": "rolls",
+	"name": "Philly Roll",
+	"price": "6.25",
+	"description": "Vegan cream cheese, yam, cucumber, and teriyaki sauce.",
+	"source": "assets/resources/rolls/1"
+},
+{
+	"id": 2,
+	"type": "rolls",
+	"name": "Yammon Roll",
+	"price": "5.25",
+	"description": "Sweet yam with teriyaki sauce.",
+	"source": "assets/resources/rolls/2"
+},
+{
+	"id": 3,
+	"type": "rolls",
+	"name": "Kappa Roll",
+	"price": "5.25",
+	"description": "Creamy avocado and crunchy cucumber. (Add cream cheese for $.50.)",
+	"source": "assets/resources/rolls/3"
+},
+{
+	"id": 4,
+	"type": "rolls",
+	"name": "Pillar Roll",
+	"price": "8.25",
+	"description": "Inside: Teriyaki flavored shitake mushroom, yam and cucumber. Outside: avocado, sesame and teriyaki sauce. A customer favorite!",
+	"source": "assets/resources/rolls/4"
+},
+{
+	"id": 5,
+	"type": "rolls",
+	"name": "Aloha Roll",
+	"price": "8.25",
+	"description": "Inside: Pineapple, 'ham', and onion tempura. Outside: Sesame, teriyaki sauce, and vegan spicy aioli.",
+	"source": "assets/resources/rolls/5"
+},
+{
+	"id": 6,
+	"type": "rolls",
+	"name": "Club Roll",
+	"price": "8.25",
+	"description": "Lettuce, avocado, 'ham', and onion tempura. Served with a house sauce (regular or spicy).",
+	"source": "assets/resources/rolls/6"
+},
+{
+	"id": 7,
+	"type": "rolls",
+	"name": "Fire Roll",
+	"price": "8.25",
+	"description": "Tofu, cucumber, jalapenos, osinko, and Korean hot sauce.",
+	"source": "assets/resources/rolls/7"
+},
+{
+	"id": 8,
+	"type": "rolls",
+	"name": "TJ Roll",
+	"price": "8.25",
+	"description": "Jalapenos, cilantro, cucumber, and 'shrimp' tempura topped with vegan spicy mayo, crispy wonton skins, and pickled carrot.",
+	"source": "assets/resources/rolls/8"
+},
+{
+	"id": 9,
+	"type": "rolls",
+	"name": "BBQ Roll",
+	"price": "8.95",
+	"description": "Inside: Avocado, cucumber, onion tempura, and 'chicken'. Outside: Cashews, carrots, and BBQ sauce. (Add pineapple for $.50.)",
+	"source": "assets/resources/rolls/9"
+},
+{
+	"id": 10,
+	"type": "rolls",
+	"name": "Hand Roll",
+	"price": "3.50",
+	"description": "'Ham,' avocado, lettuce, and cucumber wrapped in a raw nori sheet.",
+	"source": "assets/resources/rolls/10"
+},
+{
+	"id": 11,
+	"type": "rolls",
+	"name": "Thai Roll",
+	"price": "3.50",
+	"description": "'Chicken,' lettuce, cabbage, carrot, and peanut sauce",
+	"source": "assets/resources/rolls/11"
+},
+{
+	"id": 12,
+	"type": "rolls",
+	"name": "Living Roll",
+	"price": "3.50",
+	"description": "Lettuce, cucumber, carrots, bean sprouts, cabbage and, cilantro.",
+	"source": "assets/resources/rolls/12"
+},
+{
+	"id": 13,
+	"type": "rolls",
+	"name": "Combo",
+	"price": "9.00",
+	"description": "Choose any three baby rolls, hand rolls, or combination of the two for a discount.",
+	"source": "assets/resources/rolls/13"
+},
+{
+	"id": 14,
+	"type": "rolls",
+	"name": "Hand Roll",
+	"price": "3.50",
+	"description": "Lettuce, cucumber, 'chicken', and BBQ sauce.",
+	"source": "assets/resources/rolls/14"
+},
+{
+	"id": 15,
+	"type": "bowls",
+	"name": "Vietnamese Soup",
+	"price": "9.95",
+	"description": "A healthy blend of vegetables, tofu triangles or 'chicken', and rice noodles in a homemade clear vegetable broth.",
+	"source": "assets/resources/bowls/15"
+},
+{
+	"id": 16,
+	"type": "bowls",
+	"name": "Udon Soup",
+	"price": "9.95",
+	"description": "A traditional Vietnamese 'beef' noodle soup with your choice of 'beef' strips or veggie 'meatballs.' Served with: hoisin sauce; hot sauce; and a plate of bean sprouts, basil, and lemon.",
+	"source": "assets/resources/bowls/16"
+},
+{
+	"id": 17,
+	"type": "bowls",
+	"name": "Cha Siu Soup",
+	"price": "9.95",
+	"description": "Our house blend of mixed vegetables topped with traditional Chinese style BBQ 'pork.' Substitute egg-less 'egg' noodles if you prefer!",
+	"source": "assets/resources/bowls/17"
+},
+{
+	"id": 18,
+	"type": "bowls",
+	"name": "Fire Noodlez",
+	"price": "9.95",
+	"description": "Udon noodles pan fried with carrots, broccoli, bok choy, celery, and bean sprouts in our chef's spicy house sauce.",
+	"source": "assets/resources/bowls/18"
+},
+{
+	"id": 19,
+	"type": "bowls",
+	"name": "Drunken Noodlez",
+	"price": "9.95",
+	"description": "Big flat rice noodles wok fried with carrots, bean sprouts, celery, onions, and broccoli. Made with a light sauce, this dish really captures the smoky flavor of the wok.",
+	"source": "assets/resources/bowls/19"
+},
+{
+	"id": 20,
+	"type": "bowls",
+	"name": "Tangy Orange",
+	"price": "9.95",
+	"description": "Our house orange sauce with fresh orange slices. Customer favorite! GF Add broccoli or mixed vegetables for $1 more!",
+	"source": "assets/resources/bowls/20"
+},
+{
+	"id": 21,
+	"type": "bowls",
+	"name": "Broccoli Stir Fry",
+	"price": "9.95",
+	"description": "A dish that's sure to please the broccoli lover. Delicious with our 'beef'.",
+	"source": "assets/resources/bowls/21"
+},
+{
+	"id": 22,
+	"type": "bowls",
+	"name": "Sweet and Sour",
+	"price": "9.95",
+	"description": "A tangy sweet and sour sauce that includes carrots, bell peppers, celery, onions and pineapple. GF",
+	"source": "assets/resources/bowls/22"
+},
+{
+	"id": 23,
+	"type": "bowls",
+	"name": "Steam Bowl",
+	"price": "9.95",
+	"description": "A popular request of steamed tofu, broccoli, bok choy, carrots, shitake mushrooms and cabbage. Served with brown rice.",
+	"source": "assets/resources/bowls/23"
+},
+{
+	"id": 24,
+	"type": "bowls",
+	"name": "Teriyaki",
+	"price": "9.95",
+	"description": "Served with broccoli and rice on a bed of steamed cabbage.",
+	"source": "assets/resources/bowls/24"
+},
+{
+	"id": 25,
+	"type": "bowls",
+	"name": "Spicy Basil",
+	"price": "9.95",
+	"description": "An absolute favorite! Thai basil stir-fried with cabbage, baby bok choy, button mushrooms, celery, and carrots in our homemade basil sauce. Customer favorite!",
+	"source": "assets/resources/bowls/25"
+},
+{
+	"id": 26,
+	"type": "bowls",
+	"name": "House Tofu",
+	"price": "9.95",
+	"description": "Taiwanese tofu stir-fried with snow peas, celery, carrots, and bell peppers in our house spicy sauce.",
+	"source": "assets/resources/bowls/26"
+},
+{
+	"id": 27,
+	"type": "bowls",
+	"name": "Thai Curry",
+	"price": "9.95",
+	"description": "A flavorful coconut yellow curry dish with eggplant, potatoes, onions, bell peppers, and button mushrooms. Customer favorite!",
+	"source": "assets/resources/bowls/27"
+},
+{
+	"id": 28,
+	"type": "bowls",
+	"name": "Black Bean",
+	"price": "9.95",
+	"description": "Taiwanese tofu stir-fried with carrots, onions, and bell peppers in a spicy black bean sauce.",
+	"source": "assets/resources/bowls/28"
+},
+{
+	"id": 29,
+	"type": "bowls",
+	"name": "Salt and Pepper",
+	"price": "9.95",
+	"description": "The most popular dish with our servers! Crispy or steamed tofu flash-fried with garlic, scallions, and jalapenos on a bed of romaine lettuce accompanied by steamed broccoli. (Also delicious with our tempura battered 'shrimp' for $2 more.)",
+	"source": "assets/resources/bowls/29"
+},
+{
+	"id": 30,
+	"type": "desserts",
+	"name": "Oat Bar",
+	"price": "2.50",
+	"description": "A perfectly crumbled bottom topped with oats and held together by a sweet raspberry center.",
+	"source": "assets/resources/desserts/0"
+},
+{
+	"id": 31,
+	"type": "desserts",
+	"name": "Coconut Bar",
+	"price": "2.75",
+	"description": "A crumbly bottom topped with coconut shavings, walnuts, and chocolate.",
+	"source": "assets/resources/desserts/1"
+},
+{
+	"id": 32,
+	"type": "desserts",
+	"name": "Banana Cake",
+	"price": "5.75",
+	"description": "Served with warm coconut cream and crushed peanuts.",
+	"source": "assets/resources/desserts/2"
+},
+{
+	"id": 33,
+	"type": "desserts",
+	"name": "Our Homemade Cake",
+	"price": "5.75",
+	"description": "Chocolate, Carrot, Red Velvet, and Toasted Coconut.",
+	"source": "assets/resources/desserts/3"
+},
+{
+	"id": 34,
+	"type": "desserts",
+	"name": "Thai Sweet Rice",
+	"price": "6.75",
+	"description": "Served with warm coconut cream and crushed peanuts. Gluten Free",
+	"source": "assets/resources/desserts/4"
+},
+{
+	"id": 35,
+	"type": "desserts",
+	"name": "Stuffed Coconut",
+	"price": "7.50",
+	"description": "A whole young coconut stuffed with sweet rice, mung beans, and warm coconut cream, topped with salty crushed peanuts.",
+	"source": "assets/resources/desserts/5"
+},
+{
+	"id": 36,
+	"type": "desserts",
+	"name": "Cheesecake",
+	"price": "5.75",
+	"description": "Our own super yummy Vegan 'Cheese Cake' served plain or with raspberry or chocolate sauce.",
+	"source": "assets/resources/desserts/6"
+},
+{
+	"id": 37,
+	"type": "desserts",
+	"name": "Brownie Sundae",
+	"price": "4.95",
+	"description": "A warm homemade brownie topped with your choice of soy or dairy vanilla ice cream and drizzled with chocolate sauce.",
+	"source": "assets/resources/desserts/7"
+},
+{
+	"id": 38,
+	"type": "desserts",
+	"name": "Homemade Cookies",
+	"price": "3.50",
+	"description": "Oatmeal Raisin, Chocolate Chip, or Peanut Butter.",
+	"source": "assets/resources/desserts/8"
+},
+{
+	"id": 39,
+	"type": "drinks",
+	"name": "Iced Tea",
+	"price": "2.95",
+	"description": "Green or Jasmine.",
+	"source": "assets/resources/drinks/0"
+},
+{
+	"id": 40,
+	"type": "drinks",
+	"name": "Hot Tea",
+	"price": "1.50",
+	"description": "Green or Jasmine.",
+	"source": "assets/resources/drinks/1"
+},
+{
+	"id": 41,
+	"type": "drinks",
+	"name": "Soda",
+	"price": "1.89",
+	"description": "Coke, Diet Coke, Orange, Root Beer, Sprite, or Dr. Pepper.",
+	"source": "assets/resources/drinks/2"
+},
+{
+	"id": 42,
+	"type": "drinks",
+	"name": "Italian Soda",
+	"price": "3.25",
+	"description": "Strawberry or Cherry",
+	"source": "assets/resources/drinks/3"
+},
+{
+	"id": 43,
+	"type": "drinks",
+	"name": "Chai Latte",
+	"price": "3.25",
+	"description": "Vanilla or Spiced",
+	"source": "assets/resources/drinks/4"
+},
+{
+	"id": 44,
+	"type": "drinks",
+	"name": "Smoothies",
+	"price": "3.79",
+	"description": "Avocado, Strawberry, Strawberry-Banana, Mixed Berry, Mango or dairy free Green.",
+	"source": "assets/resources/drinks/5"
+},
+{
+	"id": 45,
+	"type": "drinks",
+	"name": "Milk Tea",
+	"price": "3.25",
+	"description": "Strawberry, Mango, Honey Dew, Banana, Watermelon, Peach, Taro, Original Milk, Jasmine, Chai (Spiced or Vanilla), or Thai Iced Tea.",
+	"source": "assets/resources/drinks/6"
+},
+{
+	"id": 46,
+	"type": "drinks",
+	"name": "Milk Slushees",
+	"price": "3.59",
+	"description": "Green Tea, Honey Dew, Taro, Mocha, Mocha Coconut or Pina Colada.",
+	"source": "assets/resources/drinks/7"
+},
+{
+	"id": 47,
+	"type": "drinks",
+	"name": "Slushees",
+	"price": "3.25",
+	"description": "Strawberry, Mango, Lychee, Peach, Green Apple, Pineapple, Watermelon or Passionfruit.",
+	"source": "assets/resources/drinks/8"
+}]
+
+
+
+
+
+

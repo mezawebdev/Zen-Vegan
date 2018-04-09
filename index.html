@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/ionicons.min.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -35,15 +36,18 @@
 		</div>
 
 		<div class="shopping-cart">
-			<div>2</div>
+			<div class="item-counter">2</div>
 			<span class="glyphicon glyphicon-shopping-cart"></span>
+			<div class="wrapper">
+				<button class="close-btn"><i class="ion-close-round"></i></button> 
+			</div>
 		</div>
 
-		<div id="section-0" class="section">
+		<div id="section-0">
 			<img class="graphic-0" src="assets/images/section-0-graphic-0.png" />
 			<div class="section-0-header">
 				<div>
-					<h1>完&nbsp;Authentic<br />全&nbsp;Vegan<br />な&nbsp;Cousine</h1>
+					<h1><span class="left-entrance title">完</span>&nbsp;<span class="top-entrance title">Authentic</span><br /><span class="left-entrance title">全</span>&nbsp;<span class="top-entrance title">Vegan</span><br /><span class="left-entrance title">な</span>&nbsp;<span class="top-entrance title">Cuisine</span></h1>
 				</div>
 			</div>
 			<div class="section-0-footer">
@@ -52,22 +56,23 @@
 		</div>
 
 		<div id="section-1" class="section">
+			<img class="graphic-0" src="assets/images/section-1-graphic-0.png"></img>
 			<div class="container">
 				<h1>MENU</h1>
 				<div class="menu-select">
 					<p>
 						SELECT:
 						<select>
-							<option>ROLLS</option>
-							<option>BOWLS</option>
-							<option>DESSERTS</option>
-							<option>DRINKS</option>
+							<option value="rolls">ROLLS</option>
+							<option value="bowls">BOWLS</option>
+							<option value="desserts">DESSERTS</option>
+							<option value="drinks">DRINKS</option>
 						</select>
 						<i class="ion-ios-arrow-down"></i>
 					</p>
 				</div>
 				<div class="menus-wrapper container">
-					<div class="rolls-wrapper menu-wrapper">
+					<div class="rolls-wrapper menu-wrapper active">
 						<div class="row">
 							<div class="col-sm-12">
 								<h3>ROLLS 12pcs</h3>
@@ -75,194 +80,654 @@
 						</div>
 						<div class="menus">
 							<div class="row">
-								<div class="col-sm-4 menu-option">
-									<h4>BROADWAY ROLL
+								<div class="col-sm-4 menu-option rolls-0">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">12</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(0);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>LAS VEGAS
+								<div class="col-sm-4 menu-option rolls-1">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">9</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(1);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>UNAGI
+								<div class="col-sm-4 menu-option rolls-2">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">10</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(2);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-4 menu-option">
-									<h4>BROADWAY ROLL
-										<div class="add-to-cart-btn">
-											<span class="price">12</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>LAS VEGAS
-										<div class="add-to-cart-btn">
-											<span class="price">9</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>UNAGI
-										<div class="add-to-cart-btn">
-											<span class="price">10</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-4 menu-option">
-									<h4>BROADWAY ROLL
+								<div class="col-sm-4 menu-option rolls-3">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">12</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(3);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>LAS VEGAS
+								<div class="col-sm-4 menu-option rolls-4">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">9</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(4);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>UNAGI
+								<div class="col-sm-4 menu-option rolls-5">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">10</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(5);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-4 menu-option">
-									<h4>BROADWAY ROLL
-										<div class="add-to-cart-btn">
-											<span class="price">12</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>LAS VEGAS
-										<div class="add-to-cart-btn">
-											<span class="price">9</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
-								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>UNAGI
-										<div class="add-to-cart-btn">
-											<span class="price">10</span>
-											<button>
-												<i class="ion-plus-circled"></i>
-											</button>
-										</div>
-									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-sm-4 menu-option">
-									<h4>BROADWAY ROLL
+								<div class="col-sm-4 menu-option rolls-6">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">12</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(6);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>LAS VEGAS
+								<div class="col-sm-4 menu-option rolls-7">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">9</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(7);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
 								</div>
-								<div class="col-sm-4 menu-option">
-									<h4>UNAGI
+								<div class="col-sm-4 menu-option rolls-8">
+									<h4><span class="name"></span>
 										<div class="add-to-cart-btn">
-											<span class="price">10</span>
-											<button>
+											<span class="price"></span>
+											<button onclick="addToCart(8);">
 												<i class="ion-plus-circled"></i>
 											</button>
 										</div>
 									</h4>
-									<p>King "crab" with avocado inside with spicy tuna and crunchy tempura on top.</p>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option rolls-9">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(9);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option rolls-10">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(10);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option rolls-11">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(11);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option rolls-12">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(12);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option rolls-13">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(13);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option rolls-14">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(14);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="bowls-wrapper menu-wrapper">
-
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>BOWLS</h3>
+							</div>
+						</div>
+						<div class="menus">
+							<div class="row">
+								<div class="col-sm-4 menu-option bowls-0">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(15);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-1">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(16);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-2">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(17);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option bowls-3">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(18);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-4">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(19);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-5">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(20);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option bowls-6">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(21);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-7">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(22);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-8">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(23);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option bowls-9">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(24);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-10">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(25);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-11">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(26);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option bowls-12">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(27);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-13">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(28);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option bowls-14">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(29);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="desserts-wrapper menu-wrapper">
-
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>DESSERTS</h3>
+							</div>
+						</div>
+						<div class="menus">
+							<div class="row">
+								<div class="col-sm-4 menu-option desserts-0">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(30);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-1">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(31);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-2">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(32);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option desserts-3">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(33);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-4">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(34);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-5">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(35);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option desserts-6">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(36);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-7">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(37);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option desserts-8">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(38);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="drinks-wrapper menu-wrapper">
-
+						<div class="row">
+							<div class="col-sm-12">
+								<h3>DRINKS</h3>
+							</div>
+						</div>
+						<div class="menus">
+							<div class="row">
+								<div class="col-sm-4 menu-option drinks-0">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(39);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-1">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(40);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-2">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(41);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option drinks-3">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(42);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-4">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(43);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-5">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(44);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-4 menu-option drinks-6">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(45);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-7">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(46);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+								<div class="col-sm-4 menu-option drinks-8">
+									<h4><span class="name"></span>
+										<div class="add-to-cart-btn">
+											<span class="price"></span>
+											<button onclick="addToCart(47);">
+												<i class="ion-plus-circled"></i>
+											</button>
+										</div>
+									</h4>
+									<p class="description"></p>
+								</div>
+							</div>
+						</div>
 					</div>
+					<img class="graphic-1" src="assets/images/section-1-graphic-0.png"></img>
 				</div>
 			</div>
 		</div>
+
+		<div id="section-2" class="section">
+			<img class="graphic-0" src="assets/images/section-1-graphic-0.png"></img>
+			<div class="container">
+				<h1>OFFERS</h1>
+				<div class="offers-wrapper">
+					<div class="row">
+						<div class="col-sm-3 offer-0">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-1">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-2">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-3">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+					</div>
+					<br /><br />
+					<div class="row">
+						<div class="col-sm-3 offer-4">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-5">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-6">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price">12</span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+						<div class="col-sm-3 offer-7">
+							<img src="" />
+							<br />
+							<p class="offer-item offer-item-0"><span class="offer-item-name"></span><span class="offer-0-price offer-price"></span><button><i class="ion-plus-circled"></i></button></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="graphic-1" src="assets/images/section-1-graphic-0.png"></img>
+		</div>
+
 	<!-- wrapper ends -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
