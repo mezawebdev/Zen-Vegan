@@ -1,4 +1,14 @@
 //---------------------
+//	     Kenburns
+//---------------------
+$items: 4;
+$animation-time: 6s;
+$transition-time: .5s;
+$scale: 50%;
+$total-time: ($animation-time * $items);
+$scale-base-1: (1 + $scale / 100%);
+
+//---------------------
 //	     Palette
 //---------------------
 $primary-color: #cc3333;
@@ -8,15 +18,40 @@ $primary-color: #cc3333;
 //---------------------
 // Global
 $section-padding-xs: 75px;
+$background-color: rgb(245, 245, 245);
+$box-shadow-large: 0px 6px 13px rgba(0, 0, 0, 0.5);
 
 // Navigation
 $navigation-height-xs: 90px;
-$navigation-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
+$navigation-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 $navigation-background-color: rgb(245, 245, 245);
 
 // Section 0
 $section-0-height-xs: 400px;
 $section-0-background-image: url("../images/section-0-background-7.jpg");
+
+// Section 1
+$section-1-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.3);
+
+// Section 2
+$section-2-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+// Section 3
+$section-3-background-image: url("../images/section-3-background-0.jpg");
+$overlay-color: rgba(25, 25, 25, 0.3);
+$section-3-location-background-image: url("../images/brush-background-0.png");
+
+// Section 4
+$section-4-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.3);
+$section-4-background: url("../images/section-4-background-1.png");
+
+// Slideshow Images
+$slideshow-image-0: url("../images/section-0-background-7.jpg");
+$slideshow-image-1: url("../images/section-0-background-5.jpg");
+$slideshow-image-2: url("../images/section-0-background-6.jpg");
+$slideshow-image-3: url("../images/section-0-background.jpg");
+
+
 
 //---------------------
 //	   Typography
@@ -58,3 +93,6 @@ $section-1-h4-font-weight: 300;
 $section-1-h4-font-size: 1.15em;
 $section-1-p-font-size: 0.8em;
 $section-1-p-font-weight: 300;
+
+// Footer
+$footer-social-media-colors: rgb(100, 100, 100);

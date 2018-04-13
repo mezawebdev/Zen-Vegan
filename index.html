@@ -19,6 +19,19 @@
 </head>
 <body>
 	<!-- wrapper start -->
+		<div class="slideshow active">
+		  <div class="slideshow-image"></div>
+		  <div class="slideshow-image"></div>
+		  <div class="slideshow-image"></div>
+		  <div class="slideshow-image"></div>
+		</div>
+
+		<div class="background-0">
+		</div>
+
+		<div class="background-1">
+		</div>
+
 		<div id="navigation">
 			<div class="container">
 				<div class="brand">
@@ -26,20 +39,31 @@
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="#"><i class="ion-ios-list-outline"></i>&nbsp;Menu</a></li>
-						<li><a href="#"><i class="ion-ios-pricetag-outline"></i>&nbsp;Offers</a></li>
-						<li><a href="#"><i class="ion-ios-location-outline"></i>&nbsp;Find Us</a></li>
-						<li><a href="#"><i class="ion-fork"></i>&nbsp;Order Now</a></li>
+						<li class="menu"><a class="navigation-option menu" href="#"><i class="ion-ios-list-outline"></i>&nbsp;Menu</a></li>
+						<li class="offers"><a class="navigation-option offers" href="#"><i class="ion-ios-pricetag-outline"></i>&nbsp;Offers</a></li>
+						<li class="find-us"><a class="navigation-option find-us" href="#"><i class="ion-ios-location-outline"></i>&nbsp;Find Us</a></li>
+						<li class="order-now"><a class="navigation-option order-now" href="#"><i class="ion-fork"></i>&nbsp;About</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 
-		<div class="shopping-cart">
+		<div class="shopping-cart-btn">
 			<div class="item-counter">2</div>
 			<span class="glyphicon glyphicon-shopping-cart"></span>
 			<div class="wrapper">
 				<button class="close-btn"><i class="ion-close-round"></i></button> 
+			</div>
+		</div>
+
+		<div class="checkout">
+			<div class="content">
+				<div class="header">
+					<button class="close-btn"><i class="ion-close-round"></i></button> 
+					<img src="assets/images/main-logo.png" />
+				</div>
+				<div class="body">
+				</div>
 			</div>
 		</div>
 
@@ -728,10 +752,89 @@
 			<img class="graphic-1" src="assets/images/section-1-graphic-0.png"></img>
 		</div>
 
+		<div id="section-3" class="section">
+			<div class="overlay"></div>
+			<div class="container">
+				<h1>FIND US</h1>
+				<div class="map-wrapper" id="map">
+
+				</div>
+				<div class="location-wrapper">
+					<h6>We are in San Diego</h6>
+					<div class="hr"></div>
+					<h5>ADDRESS:</h5>
+					<h6>134 Fake St, San Diego, CA, 91922</h6>
+					<h5>ORDERS:</h5>
+					<h6>+1 (619) 233 2102</h6>
+					<h5>HOURS:</h5>
+					<h6>8 AM - 10 PM</h6>
+				</div>
+			</div>
+		</div>
+
+		<div id="section-4" class="section">
+			<div class="container">
+				<h1>ABOUT</h1>
+				<div class="row">
+					<div class="col-sm-8 vertical-text">
+						<div class="background-text">
+							<p>W&nbsp;&nbsp;T&nbsp;&nbsp;V</p>
+							<br />
+							<p>E&nbsp;&nbsp;O&nbsp;&nbsp;E</p>
+							<br />
+							<p>L&nbsp;&nbsp;<span>Z</span>&nbsp;&nbsp;G</p>
+							<br />
+							<p>C&nbsp;&nbsp;<span>E</span>&nbsp;&nbsp;A</p>
+							<br />
+							<p>O&nbsp;&nbsp;<span>N</span>&nbsp;&nbsp;N</p>
+							<br />
+							<p>M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							<br />
+							<p>E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						</div>
+					</div>
+					<div class="col-sm-4 about-text">
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="background">
+			</div>
+			<img src="assets/images/background-footer.png" />
+			<div class="social-media">
+				<button><i class="ion-social-twitter"></i></button>
+				<button><i class="ion-social-instagram"></i></button>
+				<button><i class="ion-social-facebook"></i></button>
+			</div>
+			<div class="credit-line">
+				<p>&copy; 2018 Zen Vegan. Developed by <a href="http://alexmeza.me">Alex Meza</a>.</p>
+			</div>
+		</footer>
+
 	<!-- wrapper ends -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		function initMap() {
+	        var uluru = {lat: 32.842, lng: -117.257};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 15,
+	          center: uluru,
+	          disableDefaultUI: true
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+	      }
+	</script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzB4QEH-YIMu5ZyRuOYebPMrYAGlYZodE&callback=initMap">
+    </script>
 </body>
 </html>

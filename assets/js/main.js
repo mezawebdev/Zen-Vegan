@@ -144,31 +144,47 @@
 
 	const cart = {
 		items: [],
-		expanded: false,
+		active: false,
 		init: function() {
 			this.cacheDOM();
 			this.fireEvents();
 			this.render();
 		},
 		cacheDOM: function() {
-			this.cartElement = $(".shopping-cart");
-			this.cartIcon = $(".shopping-cart span");
-			this.itemCounter = $(".shopping-cart div");
-			this.closeBtn = $(".shopping-cart .wrapper button.close-btn");
+			this.cartButton = $(".shopping-cart-btn");
+			this.cartIcon = $(".shopping-cart-btn span");
+			this.itemCounter = $(".shopping-cart-btn div");
+			this.closeBtn = $(".checkout button.close-btn");
+			this.cartWrapper = $(".checkout");
+			this.cartContent = $(".checkout .content");
 		},
 		fireEvents: function() {
-			this.cartElement.on("click", () => {
-				if (! this.expanded) {
-					this.cartElement.addClass("expanded");
-					this.expanded = true;
+			this.cartButton.on("click", () => {
+				if (! this.active) {
+					this.cartWrapper.addClass("active");
+					this.cartButton.addClass("animated bounce");
+					setTimeout(() => {
+						this.cartButton.removeClass("animated bounce");
+					}, 1000)
+					this.active = true;
 				}
 			});
 
+			this.cartWrapper.on("click", () => {
+				if (this.active) {
+					this.cartWrapper.removeClass("active");
+					this.active = false;
+				}
+			});
+
+			this.cartContent.on("click", (e) => {
+				e.stopPropagation();
+			});
+
 			this.closeBtn.on("click", (e) => {
-				if (this.expanded) {
-					e.stopPropagation();
-					this.cartElement.removeClass("expanded");
-					this.expanded = false;
+				if (this.active) {
+					this.cartWrapper.removeClass("active");
+					this.active = false;
 				}
 			});
 		},
@@ -178,12 +194,103 @@
 	}
 
 	const app = {
+		mobile: false,
 		init: function() {
 			menu.init();
 			cart.init();
+			this.cacheDOM();
+			this.checkIfMobile();
+		},
+		cacheDOM: function() {
+			this.section0 = $("#section-0");
+			this.section1 = $("#section-1");
+			this.section2 = $("#section-2");
+			this.section3 = $("#section-3");
+			this.section4 = $("#section-4");
+
+			this.navigationMenu = $(".menu");
+			this.navigationOffers = $(".offers");
+			this.navigationFindUs = $(".find-us");
+			this.navigationAbout = $(".order-now");
+
+			// Backgrounds
+			this.slideshow = $(".slideshow");
+			this.background0 = $(".background-0");
+			this.background1 = $(".background-1");
 		},
 		animateTitles: function() {
 			$(".section-0-header div h1").addClass("animated fadeInRight");
+		},
+		onScroll: function() {
+			this.actifyMenus();
+			this.toggleUpScroller();
+			if (this.mobile) {
+				this.toggleBackground();
+			}
+		},
+		unactifyMenus: function() {
+			this.navigationMenu.removeClass("active");
+			this.navigationOffers.removeClass("active");
+			this.navigationFindUs.removeClass("active");
+			this.navigationAbout.removeClass("active");
+		},
+		unactifyBackgrounds: function() {
+			this.slideshow.removeClass("active");
+			this.background0.removeClass("active");
+			this.background1.removeClass("active");
+		},
+		actifyMenus: function () {
+			// Active: Menu
+			if (GLOBAL.pageYOffset >= this.section0.height() && 
+				GLOBAL.pageYOffset <= (this.section1.height() + this.section0.height())) {
+				this.navigationMenu.addClass("active");
+			} else {
+				this.navigationMenu.removeClass("active");
+			}
+
+			// Active: Offers
+			if (GLOBAL.pageYOffset >= (90 + this.section0.height() + this.section1.height()) && GLOBAL.pageYOffset <= (90 + (this.section0.height() + this.section1.height() + this.section2.height()))) {
+				this.navigationOffers.addClass("active");
+			} else {
+				this.navigationOffers.removeClass("active");
+			}
+
+			// Active: Find Us
+			if (GLOBAL.pageYOffset >= (90 + this.section0.height() + this.section1.height() + this.section2.height()) && GLOBAL.pageYOffset <= (90 + (this.section0.height() + this.section1.height() + this.section2.height() + this.section3.height()))) {
+				this.navigationFindUs.addClass("active");
+			} else {
+				this.navigationFindUs.removeClass("active");
+			}
+
+			// Active: About 
+			if (GLOBAL.pageYOffset >= (90 + this.section0.height() + this.section1.height() + this.section2.height() + this.section3.height()) && GLOBAL.pageYOffset <= (90 + (this.section0.height() + this.section1.height() + this.section2.height() + this.section3.height() + this.section4.height()))) {
+				this.navigationAbout.addClass("active");
+			} else {
+				this.navigationAbout.removeClass("active");
+			}
+		},
+		toggleUpScroller: function() {
+
+		},
+		toggleBackground: function() {
+			if (GLOBAL.pageYOffset < 1900) {
+				if (! this.slideshow.hasClass("active")) {
+					this.unactifyBackgrounds();
+					this.slideshow.addClass("active");
+				}
+			}
+
+			if (GLOBAL.pageYOffset >= 1900) {
+				if (! this.background0.hasClass("active")) {
+					this.unactifyBackgrounds();
+					this.background0.addClass("active");
+				}
+			}
+		},
+		checkIfMobile: function() {
+			if (/Mobi/.test(navigator.userAgent)) {
+			    this.mobile = true;
+			}
 		}
 	}
 
@@ -191,6 +298,10 @@
 
 	GLOBAL.onload = function() {
 		app.animateTitles();
+	}
+
+	GLOBAL.onscroll = function() {
+		app.onScroll();
 	}
 
 	app.init();
