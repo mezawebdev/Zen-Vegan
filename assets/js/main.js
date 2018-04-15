@@ -22,15 +22,37 @@
 			// this.render();
 		},
 		cacheDOM: function() {
-			this.menuSelect = $(".menu-select select");
+			// this.menuSelect = $(".menu-select select");
 			this.rollsWrapper = $(".menus-wrapper .rolls-wrapper");
 			this.bowlsWrapper = $(".menus-wrapper .bowls-wrapper");
 			this.dessertsWrapper = $(".menus-wrapper .desserts-wrapper");
 			this.drinksWrapper = $(".menus-wrapper .drinks-wrapper");
+
+			this.menuOption0 = $(".menu-select .menu-0");
+			this.menuOption1 = $(".menu-select .menu-1");
+			this.menuOption2 = $(".menu-select .menu-2");
+			this.menuOption3 = $(".menu-select .menu-3");
 		},
 		setEvents: function() {
+			/*
 			this.menuSelect.on("change", () => {
 				this.switchMenu(this.menuSelect.val());
+			});
+			*/
+			this.menuOption0.on("click", () => {
+				this.switchMenu("rolls");
+			});
+
+			this.menuOption1.on("click", () => {
+				this.switchMenu("bowls");
+			});
+
+			this.menuOption2.on("click", () => {
+				this.switchMenu("desserts");
+			});
+
+			this.menuOption3.on("click", () => {
+				this.switchMenu("drinks");
 			});
 		},
 		unactifyMenus: function() {
@@ -38,6 +60,10 @@
 			this.bowlsWrapper.removeClass("active");
 			this.dessertsWrapper.removeClass("active");
 			this.drinksWrapper.removeClass("active");
+			this.menuOption0.removeClass("active");
+			this.menuOption1.removeClass("active");
+			this.menuOption2.removeClass("active");
+			this.menuOption3.removeClass("active");
 		},
 		addToCart: function(itemId) {
 			
@@ -48,21 +74,25 @@
 					this.unactifyMenus();
 					this.activeMenu = "rolls";
 					this.rollsWrapper.addClass("active");
+					this.menuOption0.addClass("active");
 					break;
 				case "bowls":
 					this.unactifyMenus();
 					this.activeMenu = "bowls";
 					this.bowlsWrapper.addClass("active");
+					this.menuOption1.addClass("active");
 					break;
 				case "desserts":
 					this.unactifyMenus();
 					this.activeMenu = "desserts";
 					this.dessertsWrapper.addClass("active");
+					this.menuOption2.addClass("active");
 					break;
 				case "drinks":
 					this.unactifyMenus();
 					this.activeMenu = "drinks";
 					this.drinksWrapper.addClass("active");
+					this.menuOption3.addClass("active");
 					break;
 			}
 		},
@@ -224,9 +254,7 @@
 		onScroll: function() {
 			this.actifyMenus();
 			this.toggleUpScroller();
-			if (this.mobile) {
-				this.toggleBackground();
-			}
+			this.toggleBackground();
 		},
 		unactifyMenus: function() {
 			this.navigationMenu.removeClass("active");
@@ -284,6 +312,13 @@
 				if (! this.background0.hasClass("active")) {
 					this.unactifyBackgrounds();
 					this.background0.addClass("active");
+				}
+			}
+
+			if (GLOBAL.pageYOffset === ($(DOM).height() - GLOBAL.innerHeight)) {
+				if (! this.background1.hasClass("active")) {
+					this.unactifyBackgrounds();
+					this.background1.addClass("active");
 				}
 			}
 		},

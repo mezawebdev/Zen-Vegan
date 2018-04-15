@@ -39,7 +39,6 @@ body, html {
 }
 
 .background-0 {
-	background: blue;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -57,7 +56,6 @@ body, html {
 }
 
 .background-1 {
-	background: red;
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
@@ -65,6 +63,7 @@ body, html {
 	display: none;
 	top: 0;
 	left: 0;
+	background: #577693;
 }
 
 .background-1.active {
@@ -240,7 +239,7 @@ body, html {
 	opacity: 0;
 	.content {
 		width: 90%;
-		height: 80%;
+		height: 425px;
 		background: rgb(250, 250, 250);
 		border-radius: 50px;
 		box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
@@ -248,8 +247,10 @@ body, html {
 		top: 50%;
 		left: 50%;
 		position: relative;
+		overflow: hidden;
 		.header {
 			padding-top: 20px;
+			padding-bottom: 20px;
 			button.close-btn {
 				position: absolute;
 				left: 12px;
@@ -260,9 +261,33 @@ body, html {
 				border: none !important;
 			}
 			img {
-				width: 50px;
+				width: 44px;
 				margin: 0 auto;
 				display: block;
+			}
+		}
+		.body {
+			width: 100%;
+			height: 341px;
+			background: blue;
+			border-bottom-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+			white-space: nowrap;
+			position: relative;
+			left: -200px;
+			.body-section {
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				left: 0;
+				position: relative;
+				margin: 0;
+			}
+			.body-section-0 {
+				background: green;
+			}
+			.body-section-1 {
+				background: pink;
 			}
 		}
 	}
@@ -272,25 +297,6 @@ body, html {
 	opacity: 1;
 	pointer-events: auto;
 }
-
-
-/*
-.shopping-cart.expanded {
-	bottom: 50%;
-	right: 50%;
-	transform: translate(50%, 50%);
-	height: 80vh;
-	width: 90vw;
-	span.glyphicon {
-		display: none;
-	}
-	div.item-counter {
-		display: none;
-	}
-	.wrapper {
-		opacity: 1;
-	}
-}*/
 
 //---------------------
 //	   	  Body
@@ -404,6 +410,28 @@ body, html {
 	.menu-select {
 		text-align: center;
 		margin-top: 10px;
+		white-space: nowrap;
+		.menu-choice {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 60px;
+			display: inline-block;
+			white-space: nowrap;
+			background: rgb(200, 200, 200);
+			position: relative;
+			z-index: 10;
+			border-radius: 20px;
+			p {
+				font-size: 0.7em !important;
+				font-weight: 400 !important;
+			}
+		}
+		.menu-choice.active {
+			background: $primary-color;
+			p {
+				color: rgb(250, 250, 250) !important;
+			}
+		}
 		p {
 			color: $subheader-font-color;
 			font-weight: $subheader-font-weight;
