@@ -12,6 +12,7 @@ $scale-base-1: (1 + $scale / 100%);
 //	     Palette
 //---------------------
 $primary-color: #cc3333;
+$active-color: #8F2325;
 
 //---------------------
 //	      Styles
@@ -51,7 +52,8 @@ $slideshow-image-1: url("../images/section-0-background-5.jpg");
 $slideshow-image-2: url("../images/section-0-background-6.jpg");
 $slideshow-image-3: url("../images/section-0-background.jpg");
 
-
+// Checkout
+$cart-item-box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.14);
 
 //---------------------
 //	   Typography
