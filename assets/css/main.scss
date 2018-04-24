@@ -13,6 +13,10 @@ body, html {
 	overflow-x: hidden;
 }
 
+.ps__rail-y, .ps__rail-x {
+	display: none;
+}
+
 // Kenburns Slideshow
 .slideshow {
 	position: fixed;
@@ -128,6 +132,10 @@ body, html {
   }
 }
 
+
+//----------------------------------
+//	  XSmall Devices (0px -> 479px)
+//----------------------------------
 //---------------------
 //	   Navigation
 //---------------------
@@ -141,6 +149,10 @@ body, html {
 	z-index: 100;
 	top: 0;
 	left: 0;
+	transition: height 0.25s ease-in-out;
+	-moz-transition: height 0.25s ease-in-out;
+	-o-transition: height 0.25s ease-in-out;
+	-webkit-transition: height 0.25s ease-in-out;
 	.brand {
 		img {
 			width: 40px;
@@ -185,31 +197,37 @@ body, html {
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
-	background: rgb(250, 250, 250);
+	background: $primary-color;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 	padding-top: 12px;
 	padding-left: 12px;
 	z-index: 90;
 	z-index: 150;
-	transition: width 0.50s ease-in-out, height 0.50s ease-in-out, bottom 0.50s ease-in-out, right 0.50s ease-in-out, transform 0.50s ease-in-out, left 0.50s ease-in-out, top 0.50s ease-in-out;
+	cursor: pointer;
+	transition: background 0.25s ease-in-out, width 0.50s ease-in-out, height 0.50s ease-in-out, bottom 0.50s ease-in-out, right 0.50s ease-in-out, transform 0.25s ease-in-out, left 0.50s ease-in-out, top 0.50s ease-in-out;
 	span {
 		font-size: 1.5em;
+		color: rgb(255, 255, 255);
+		transition: color 0.25s ease-in-out;
+		-moz-transition: color 0.25s ease-in-out;
+		-o-transition: color 0.25s ease-in-out;
+		-webkit-transition: color 0.25s ease-in-out;
 	}
 	div.item-counter {
 		width: 16px;
 		height: 16px;
-		padding-left: 5px;
 		padding-top: 3px;
 		border-radius: 8px;
-		background: $primary-color;
+		background: rgb(35, 35, 35);
 		position: absolute;
 		z-index: 10;
 		margin-left: 16px;
 		margin-top: -5px;
 		color: rgb(250, 250, 250);
 		font-family: sans-serif;
-		font-size: 0.7em;
+		font-size: 0.65em;
 		overflow: hidden;
+		text-align: center;
 	}
 	.wrapper {
 		// display: none;
@@ -223,6 +241,24 @@ body, html {
 			right: left;
 			padding: 10px;
 		}
+	}
+}
+
+.shopping-cart-btn:hover {
+	transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+}
+
+.shopping-cart-btn:active {
+	transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	-webkit-transform: scale(0.95);
+	background: $primary-color;
+	span {
+		color: rgb(250, 250, 250);
 	}
 }
 
@@ -249,6 +285,7 @@ body, html {
 		position: relative;
 		overflow: hidden;
 		transition: transform 0.4s ease-in-out;
+		white-space: nowrap;
 		.header {
 			padding-top: 20px;
 			padding-bottom: 20px;
@@ -295,6 +332,7 @@ body, html {
 				}
 			}
 			.body-section-0 {
+				white-space: nowrap;
 				// background: green;
 				.cart-item-reel {
 					width: 100%;
@@ -304,6 +342,16 @@ body, html {
 					padding: 0px 29px 0px 29px;
 					.cart-item {
 						position: relative;
+						width: 100%;
+						// height: 47px;
+						background: #F0F0F0;
+						box-shadow: $cart-item-box-shadow;
+						margin-bottom: 15px;
+						padding: 11px 11px 11px 11px;
+						transition: background 0.15s ease-in-out;
+						-moz-transition: background 0.15s ease-in-out;
+						-o-transition: background 0.15s ease-in-out;
+						-webkit-transition: background 0.15s ease-in-out;
 						.float-right {
 							float: right;
 						}
@@ -319,6 +367,7 @@ body, html {
 							opacity: 0;
 							pointer-events: none;
 							z-index: 20;
+							// cursor: pointer;
 							transition: opacity 0.25s ease-in-out;
 							-moz-transition: opacity 0.25s ease-in-out;
 							-o-transition: opacity 0.25s ease-in-out;
@@ -359,6 +408,7 @@ body, html {
 								padding: 3px 0px 0px 6px;
 								font-size: 1.2em;
 								color: rgb(250, 250, 250);
+								cursor: pointer;
 							}
 							.circle-1 {
 								width: 30px;
@@ -374,8 +424,9 @@ body, html {
 								padding: 3px 0px 0px 6px;
 								font-size: 1.2em;
 								color: rgb(250, 250, 250);
+								cursor: pointer;
 							}
-							.circle-0:active, .circle-1:active {
+							.circle-0:hover, .circle-0:active, .circle-1:hover, .circle-1:active {
 								background: $active-color;
 							}
 						}
@@ -387,12 +438,6 @@ body, html {
 							display: inline-block;
 							white-space: nowrap;
 						}
-						width: 100%;
-						// height: 47px;
-						background: #F0F0F0;
-						box-shadow: $cart-item-box-shadow;
-						margin-bottom: 15px;
-						padding: 11px 11px 11px 11px;
 						.cart-item-quantity {
 							width: 34px;
 							height: 27px;
@@ -402,10 +447,12 @@ body, html {
 							color: rgb(35, 35, 35) !important;
 							text-align: center;
 							padding-top: 5px;
+							cursor: pointer;
 						}
 						.cart-item-name {
 							font-size: 0.75em;
 							font-weight: 400;
+							pointer-events: none;
 						}
 						.cart-item-price {
 							font-size: 0.75em;
@@ -413,18 +460,25 @@ body, html {
 						}
 						.cart-item-delete {
 							div {
-								width: 18px;
-								height: 18px;
-								border-radius: 9px;
+								// width: 18px;
+								// height: 18px;
+								border-radius: 50%;
 								background: $primary-color;
 								position: relative;
 								font-size: 0.65em;
 								color: rgb(255, 255, 255);
 								text-align: center;
-								padding-top: 3px;
-								padding-right: 1px;
+								// padding-top: 3px;
+								padding: 4px 5px 4px 5px;
+								cursor: pointer;
+							}
+							div:hover, div:active {
+								background: $active-color;
 							}
 						}
+					}
+					.cart-item:active {
+						background: rgb(225, 225, 225);
 					}
 				}
 				.footer {
@@ -451,20 +505,38 @@ body, html {
 						font-size: 0.9em;
 						color: rgb(255, 255, 255);
 						border: none !important;
+						border: 0 !important;
 						border-radius: 6px;
 						box-shadow: $box-shadow-large;
 						margin-top: 10px;
 						background: linear-gradient(180deg, rgb(204, 51, 51), rgb(137, 42, 42));
+						transition: transform 0.25s ease-in-out, background 0.25s ease-in-out;
+					}
+					button:hover {
+						transform: scale(1.02);
+						-moz-transform: scale(1.02);
+						-webkit-transform: scale(1.02);
+						-o-transform: scale(1.02);
+						// background: $active-color;
+					}
+					button:active {
+						transform: scale(0.98);
+						-moz-transform: scale(0.98);
+						-webkit-transform: scale(0.98);
+						-o-transform: scale(0.98);
+						// background: $active-color;
 					}
 				}
 			}
 			.body-section-1 {
-				background: pink;
-				margin-left: -10px;
+				// background: pink;
+				margin-left: -9px;
+				white-space: nowrap;
+				top: -280px;
 			}
 		}
 		.body.secondary {
-			left: -100%;
+			// left: -100%;
 		}
 	}
 }
@@ -485,6 +557,10 @@ body, html {
 	padding-top: $section-padding-xs;
 	padding-bottom: $section-padding-xs;
 	z-index: 10;
+	transition: padding-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+	-moz-transition: padding-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+	-o-transition: padding-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
+	-webkit-transition: padding-bottom 0.25s ease-in-out, padding-top 0.25s ease-in-out;
 	h1 {
 		font-size: $h1-font-size;
 		text-align: center;
@@ -591,19 +667,41 @@ body, html {
 		margin-top: 10px;
 		white-space: nowrap;
 		.menu-choice {
-			padding-top: 10px;
-			padding-bottom: 10px;
 			width: 60px;
 			display: inline-block;
 			white-space: nowrap;
-			background: rgb(200, 200, 200);
+			background: rgb(225, 225, 225);
 			position: relative;
 			z-index: 10;
 			border-radius: 20px;
+			padding: 10px 0px 10px 0px;
+			cursor: pointer;
+			transition: background $global-transition-duration ease-in-out, color $global-transition-duration ease-in-out, transform $global-transition-duration ease-in-out;
+			-moz-transition: background $global-transition-duration ease-in-out, color $global-transition-duration ease-in-out, transform $global-transition-duration ease-in-out;
+			-o-transition: background $global-transition-duration ease-in-out, color $global-transition-duration ease-in-out, transform $global-transition-duration ease-in-out;
+			-webkit-transition: background $global-transition-duration ease-in-out, color $global-transition-duration ease-in-out, transform $global-transition-duration ease-in-out;
 			p {
-				font-size: 0.7em !important;
+				font-size: 0.65em !important;
 				font-weight: 400 !important;
 			}
+		}
+		.menu-choice:active, .menu-choice:hover {
+			background: $primary-color;
+			p {
+				color: rgb(250, 250, 250) !important;
+			}
+		}
+		.menu-choice:active {
+			transform: scale(0.95);
+			-moz-transform: scale(0.95);
+			-o-transform: scale(0.95);
+			-webkit-transform: scale(0.95);
+		}
+		.menu-choice:hover {
+			transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			-o-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
 		}
 		.menu-choice.active {
 			background: $primary-color;
@@ -840,17 +938,18 @@ body, html {
 	.vertical-text {
 		text-align: center;
 		background-image: $section-4-background;
-		background-size: 80%;
+		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
 		.background-text {
-			background: rgba(250, 250, 250, 0.7);
+			background: rgba(250, 250, 250, 0.8);
 			box-shadow: $box-shadow-large;
 			width: 150px;
 			height: auto;
 			padding-top: 15px;
 			padding-bottom: 15px;
-			margin-left: 25px;
+			margin: 0 auto;
+			left: -50px;
 			position: relative;
 			animation-name: float;
 			animation-duration: 1.25s;
@@ -861,6 +960,7 @@ body, html {
 		p {
 			font-weight: 300;
 			font-size: 1.25em;
+			color: rgb(35, 35, 35);
 		}
 		span {
 			color: $primary-color;
@@ -871,9 +971,10 @@ body, html {
 		margin-top: 35px;
 		text-align: center;
 		p {
-			font-size: 0.9em;
-			color: rgb(125, 125, 125);
-			line-height: 17px;
+			font-size: 1em;
+			font-weight: 300;
+			color: rgb(75, 75, 75);
+			line-height: 20px;
 		}
 	}
 }
@@ -937,6 +1038,123 @@ footer {
 	}
 }
 
+//----------------------------------
+//	   Small Devices (480px - 767px)
+//----------------------------------
+@media (min-width: 480px) {
+	.checkout {
+		.content {
+			width: 350px;
+		}
+	}
+
+	#section-0 {
+		height: $section-0-height-sm;
+	}
+}
+
+//----------------------------------
+//	   Small Devices (480px - 767px)
+//----------------------------------
+@media (min-width: 767px) {
+	#navigation {
+		height: $navigation-height-md;
+		.brand {
+			img {
+				margin: 0;
+				top: 15px;
+				position: relative;
+				width: 100px;
+				filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
+				position: absolute;
+			}
+		}
+
+		.nav {
+			// position: absolute;
+			margin-top: 17px;
+			a {
+				font-size: 0.75em !important;
+			}
+		}
+	}
+
+	.section {
+		padding-top: $section-padding-md;
+		padding-bottom: $section-padding-md;
+	}
+
+	#section-0 {
+		height: $section-0-height-md;
+		.section-0-header {
+			div {
+				h1 {
+					font-size: $section-0-h1-font-size-md !important;
+				}
+			}
+		}
+		img.graphic-0 {
+			width: 275px;
+			// transform: translate(20px, 0);
+		}
+	}
+
+	#section-2 {
+		.offers-wrapper {
+			img {
+				width: auto;
+				height: 90px;
+			}
+			.row .col-sm-3:nth-child(2), .row .col-sm-3:nth-child(3), .row .col-sm-3:nth-child(4) {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	#section-3 {
+		.map-wrapper {
+			width: 60%;
+			margin: 0 auto;
+			margin-top: 25px;
+		}
+	}
+
+	#section-4 {
+		.about-text {
+			text-align: left;
+			margin-top: 0;
+		}
+
+		.vertical-text {
+			height: 400px;
+			p {
+				font-size: 1.8em;
+			}
+			.background-text {
+				padding-left: 25px;
+				padding-right: 25px;
+				width: 200px;
+			}
+		}
+	}
+
+	footer {
+		height: 300px;
+		img {
+			width: 100%;
+		}
+		.social-media {
+			padding-top: 0px;
+			transform: translate(0, -50%);
+			top: 50%;
+		}
+	}
+}
+
+
+//---------------------
+//	   Animations
+//---------------------
 @keyframes float {
 	0% {
 		top: -2px;

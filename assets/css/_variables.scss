@@ -19,23 +19,30 @@ $active-color: #8F2325;
 //---------------------
 // Global
 $section-padding-xs: 75px;
+$section-padding-md: 100px;
 $background-color: rgb(245, 245, 245);
+$box-shadow-section-upwards: 0px -4px 4px rgba(0, 0, 0, 0.2);
+$box-shadow-section-downwards: 0px 4px 4px rgba(0, 0, 0, 0.2);
 $box-shadow-large: 0px 6px 13px rgba(0, 0, 0, 0.5);
+$global-transition-duration: 0.15s;
 
 // Navigation
 $navigation-height-xs: 90px;
-$navigation-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+$navigation-height-md: 75px;
+$navigation-box-shadow: $box-shadow-section-downwards;
 $navigation-background-color: rgb(245, 245, 245);
 
 // Section 0
 $section-0-height-xs: 400px;
+$section-0-height-sm: 475px;
+$section-0-height-md: 500px;
 $section-0-background-image: url("../images/section-0-background-7.jpg");
 
 // Section 1
-$section-1-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.3);
+$section-1-box-shadow: $box-shadow-section-upwards;
 
 // Section 2
-$section-2-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+$section-2-box-shadow: $box-shadow-section-downwards;
 
 // Section 3
 $section-3-background-image: url("../images/section-3-background-0.jpg");
@@ -43,7 +50,7 @@ $overlay-color: rgba(25, 25, 25, 0.3);
 $section-3-location-background-image: url("../images/brush-background-0.png");
 
 // Section 4
-$section-4-box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.3);
+$section-4-box-shadow: $box-shadow-section-upwards;
 $section-4-background: url("../images/section-4-background-1.png");
 
 // Slideshow Images
@@ -71,13 +78,14 @@ $subheader-font-weight: 200;
 
 // Navigation
 $navigation-font-color: rgb(35, 35, 35);
-$navigation-letter-spacing: 0px;
+$navigation-letter-spacing: 1px;
 $navigation-font-weight: 400;
 
 // Section 0
 $section-0-h1-font-family: "Source Code Pro", cursive;
 $section-0-h1-color: rgb(240, 240, 240);
 $section-0-h1-font-size-xs: 2.4em;
+$section-0-h1-font-size-md: 3em;
 $section-0-h1-font-weight: 300;
 $section-0-h1-text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.8);
 $section-0-p-font-size: 0.8em;

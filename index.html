@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Zen Vegan - 100% Vegan Asian Cousine</title>
+	<title>Zen Vegan - 100% Vegan Asian Cuisine</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge />">
 	<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
@@ -39,10 +39,10 @@
 			</div>
 			<div class="nav">
 				<ul>
-					<li class="menu"><a class="navigation-option menu" href="#"><i class="ion-ios-list-outline"></i>&nbsp;Menu</a></li>
-					<li class="offers"><a class="navigation-option offers" href="#"><i class="ion-ios-pricetag-outline"></i>&nbsp;Offers</a></li>
-					<li class="find-us"><a class="navigation-option find-us" href="#"><i class="ion-ios-location-outline"></i>&nbsp;Find Us</a></li>
-					<li class="order-now"><a class="navigation-option order-now" href="#"><i class="ion-fork"></i>&nbsp;About</a></li>
+					<li class="menu"><a data-scroll class="navigation-option menu" href="#section-1"><i class="ion-ios-list-outline"></i>&nbsp;Menu</a></li>
+					<li class="offers"><a data-scroll class="navigation-option offers" href="#section-2"><i class="ion-ios-pricetag-outline"></i>&nbsp;Offers</a></li>
+					<li class="find-us"><a data-scroll class="navigation-option find-us" href="#section-3"><i class="ion-ios-location-outline"></i>&nbsp;Find Us</a></li>
+					<li class="order-now"><a data-scroll class="navigation-option order-now" href="#section-4"><i class="ion-fork"></i>&nbsp;About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -56,8 +56,8 @@
 		</div>
 	</div>
 
-	<div class="checkout">
-		<div class="content">
+	<div class="checkout" ondragover="detectDragOver(true);">
+		<div class="content" ondragover="event.stopPropagation(); detectDragOver(false);">
 			<div class="header">
 				<button class="close-btn"><i class="ion-close-round"></i></button> 
 				<img src="assets/images/main-logo.png" />
@@ -75,13 +75,13 @@
 
 					<div class="footer">
 						<p><span class="subtotal">Subtotal</span><span class="subtotal-amount">$0.00</span></p>
-						<button class="checkout-btn">Check Out</button>
+						<button class="checkout-btn"><i class="ion-locked"></i>&nbsp;Check Out</button>
 					</div>
 				</div>
 
 
 				<div class="checkout-section body-section body-section-1">
-						<h4>Shopping Cart - <span class="num-items">2</span>&nbsp;Item(s)</h4>
+						<h4>Check Out - <span class="num-items">0</span>&nbsp;Item(s)</h4>
 				</div>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class="section-0-footer">
-			<p><i class="ion-clock"></i>&nbsp;<span class="time">2:28pm</span>&nbsp;-&nbsp;It's&nbsp;<span class="day">Thursday</span>, we're <span class="status">Open</span></p>
+			<p><i class="ion-clock"></i>&nbsp;<span id="time"></span>&nbsp;-&nbsp;It's&nbsp;<span class="day"></span>, we're <span class="status"></span></p>
 		</div>
 	</div>
 
@@ -811,7 +811,7 @@
 		<div class="container">
 			<h1>ABOUT</h1>
 			<div class="row">
-				<div class="col-sm-8 vertical-text">
+				<div class="col-sm-6 vertical-text">
 					<div class="background-text">
 						<p>W&nbsp;&nbsp;T&nbsp;&nbsp;V</p>
 						<br />
@@ -828,7 +828,7 @@
 						<p>E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 					</div>
 				</div>
-				<div class="col-sm-4 about-text">
+				<div class="col-sm-6 about-text">
 					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 				</div>
 			</div>
@@ -850,8 +850,8 @@
 	</footer>
 
 	 <template id="template">
-    	<div class="cart-item">
-			<div class="cart-item-quantity-select">
+    	<div class="cart-item" draggable="true" ondragend="itemDropHandler(this);">
+			<div class="cart-item-quantity-select" onclick="quantitySelectHandle(event, this);">
 				<div class="triangle"></div>
 				<div class="rectangle"></div>
 				<div class="circle-0"><i class="ion-minus-round"></i></div>
@@ -875,8 +875,8 @@
     </template>
 
      <template id="template-active-quantity">
-    	<div class="cart-item">
-			<div class="cart-item-quantity-select active" onclick="stopPropagation();">
+    	<div class="cart-item" draggable="true" ondragend="itemDropHandler(this);">
+			<div class="cart-item-quantity-select active" onclick="quantitySelectHandle(event, this);">
 				<div class="triangle"></div>
 				<div class="rectangle"></div>
 				<div class="circle-0"><i class="ion-minus-round"></i></div>
@@ -902,8 +902,13 @@
 	<!-- wrapper ends -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<script src="assets/js/date.js"></script>
+	<script src="assets/js/smooth-scroll.min.js"></script>
+	<script src="assets/js/perfect-scrollbar.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		var scroll = new SmoothScroll('a[href*="#"]');
+	</script>
 	<script>
 		function initMap() {
 	        var uluru = {lat: 32.842, lng: -117.257};
