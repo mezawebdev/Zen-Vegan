@@ -340,6 +340,10 @@ body, html {
 					// background: red;
 					overflow: hidden;
 					padding: 0px 29px 0px 29px;
+					background-image: $cart-background;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: 60%;
 					.cart-item {
 						position: relative;
 						width: 100%;
@@ -481,6 +485,9 @@ body, html {
 						background: rgb(225, 225, 225);
 					}
 				}
+				.cart-item-reel.active {
+					background-image: none !important;
+				}
 				.footer {
 					width: 100%;
 					height: 109px;
@@ -530,9 +537,84 @@ body, html {
 			}
 			.body-section-1 {
 				// background: pink;
-				margin-left: -9px;
+				margin-left: -10px;
 				white-space: nowrap;
-				top: -280px;
+				top: -1px;
+				// background: red;
+				a {
+					color: $primary-color;
+					font-weight: bold;
+				}
+				a:active, a:hover {
+					text-decoration: none;
+					color: $active-color;
+				}
+				.checkout-item-reel {
+					width: 100%;
+					height: 115px;
+					background: blue;
+					padding: 0px 29px 0px 29px;
+					overflow: hidden;
+				}
+				.footer {
+					width: 100%;
+					height: 109px;
+					// background: blue;
+					border-bottom-right-radius: 50px;
+					border-bottom-left-radius: 50px;
+					padding: 10px 29px 29px 29px;
+					.margin-bottom {
+						margin-bottom: 10px;
+					}
+					img {
+						width: 40px;
+					}
+					p {
+						font-size: 0.8em;
+						font-weight: 400;
+						.bold {
+							font-weight: bold !important;
+							font-size: 1.2em;
+						}
+						.subtotal-amount {
+							float: right;
+						}
+						.float-right {
+							float: right;
+						}
+						.visa-acc {
+							color: rgb(150, 150, 150);
+						}
+					}
+					button {
+						width: 100%;
+						padding: 14px 0px 14px 0px;
+						font-weight: bold;
+						font-size: 0.9em;
+						color: rgb(255, 255, 255);
+						border: none !important;
+						border: 0 !important;
+						border-radius: 6px;
+						box-shadow: $box-shadow-large;
+						margin-top: 10px;
+						background: linear-gradient(180deg, rgb(204, 51, 51), rgb(137, 42, 42));
+						transition: transform 0.25s ease-in-out, background 0.25s ease-in-out;
+					}
+					button:hover {
+						transform: scale(1.02);
+						-moz-transform: scale(1.02);
+						-webkit-transform: scale(1.02);
+						-o-transform: scale(1.02);
+						// background: $active-color;
+					}
+					button:active {
+						transform: scale(0.98);
+						-moz-transform: scale(0.98);
+						-webkit-transform: scale(0.98);
+						-o-transform: scale(0.98);
+						// background: $active-color;
+					}
+				}
 			}
 		}
 		.body.secondary {

@@ -185,8 +185,10 @@
 		items: [],
 		active: false,
 		subtotal: 0,
+		total: 0,
 		tab: "cart",
 		itemDragOver: false,
+		deliveryAmount: 4.00,
 		init: function() {
 			this.cacheDOM();
 			this.fireEvents();
@@ -206,12 +208,16 @@
 			this.cartItemTemplateActiveQuantity = $("#template-active-quantity").html();
 
 			this.cartSubtotal = $(".subtotal-amount");
+			this.cartDelivery = $(".delivery-amount");
+			this.cartTotal = $(".total-amount");
 
 			this.cartItemsReel = $(".checkout .cart-item-reel");
 
 			this.cartItemsReelVanilla = document.getElementsByClassName("cart-item-reel")[0];
 
 			this.checkOutBtn = $(".checkout-btn");
+
+			this.editCartBtn = $(".edit-cart-btn");
 		},
 		fireEvents: function() {
 			this.cartButton.on("click", () => {
@@ -261,11 +267,17 @@
 			});
 
 			this.cartScroller = new PerfectScrollbar(this.cartItemsReelVanilla);
+
+			this.editCartBtn.on("click", (e) => {
+				e.preventDefault();
+				this.slideTo("cart");
+			});
 		},
 		render: function() {
 			this.renderItemCounter();
 			this.renderCart();
 			this.renderSubtotal();
+			this.renderTotal();
 			this.cartScroller.update();
 		},
 		renderItemCounter: function() {
@@ -284,6 +296,7 @@
 		renderCart: function() {
 			this.cartItemsReel.html("");
 			if (this.items.length > 0) {
+				this.cartItemsReel.addClass("active");
 				for (var i = 0; i < this.items.length; i++) {
 					if (this.items[i].quantitySelector) {
 						this.cartItemsReel.append(this.cartItemTemplateActiveQuantity);
@@ -292,6 +305,10 @@
 					}
 					this.renderCartItem(this.items[i]);
 				}
+			}
+
+			if (this.items.length === 0) {
+				this.cartItemsReel.removeClass("active");
 			}
 		},
 		renderCartItem: function(item) {
@@ -335,6 +352,15 @@
 
 			// Render Subtotal DOM
 			this.cartSubtotal.html("$" + this.subtotal.toFixed(2));
+		},
+		renderTotal: function() {
+			this.cartTotal.html("");
+			this.cartDelivery.html("$" + this.deliveryAmount.toFixed(2));
+
+			this.total = this.subtotal + this.deliveryAmount;
+			
+			// Render Total DOM
+			this.cartTotal.html("$" + this.total.toFixed(2));
 		},
 		bounceCartButton: function() {
 			this.cartButton.addClass("animated bounce");
