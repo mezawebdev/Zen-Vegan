@@ -529,9 +529,31 @@ body, html {
         .checkout .content .body .body-section-1 .checkout-item-reel {
           width: 100%;
           height: 115px;
-          background: blue;
           padding: 0px 29px 0px 29px;
           overflow: hidden; }
+          .checkout .content .body .body-section-1 .checkout-item-reel .checkout-item {
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 0.8em;
+            font-weight: 300; }
+            .checkout .content .body .body-section-1 .checkout-item-reel .checkout-item .checkout-prop {
+              display: inline-block; }
+            .checkout .content .body .body-section-1 .checkout-item-reel .checkout-item .checkout-item-price {
+              float: right;
+              position: relative;
+              top: 5px; }
+            .checkout .content .body .body-section-1 .checkout-item-reel .checkout-item .checkout-item-quantity {
+              background: white;
+              padding: 5px;
+              font-weight: bold; }
+          .checkout .content .body .body-section-1 .checkout-item-reel .divider {
+            width: 100%;
+            height: 1px;
+            background: #ebebeb;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 50px; }
         .checkout .content .body .body-section-1 .footer {
           width: 100%;
           height: 109px;

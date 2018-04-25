@@ -552,9 +552,38 @@ body, html {
 				.checkout-item-reel {
 					width: 100%;
 					height: 115px;
-					background: blue;
+					// background: blue;
 					padding: 0px 29px 0px 29px;
 					overflow: hidden;
+					.checkout-item {
+						width: 100%;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						// background: red;
+						font-size: 0.8em;
+						font-weight: 300;
+						.checkout-prop {
+							display: inline-block;
+						}
+						.checkout-item-price {
+							float: right;
+							position: relative;
+							top: 5px;
+						}
+						.checkout-item-quantity {
+							background: white;
+							padding: 5px;
+							font-weight: bold;
+						}
+					}
+					.divider {
+						width: 100%;
+						height: 1px;
+						background: rgb(235, 235, 235);
+						margin-top: 5px;
+						margin-bottom: 5px;
+						border-radius: 50px;
+					}
 				}
 				.footer {
 					width: 100%;
