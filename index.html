@@ -19,6 +19,22 @@
 </head>
 <body>
 	<!-- wrapper start -->
+	<div id="loading">
+		<div class="loader">Loading...</div>
+	</div>
+	<div id="success">
+		<div>
+			<i class="ion-checkmark-circled"></i>
+			<br />
+			<h2>All Set!</h2>
+			<br />
+			<p>Your food is now being cooked.</p>
+			<br />
+			<p class="delivery-time"><i class="ion-clock"></i>&nbsp;Estimated Delivery: <span>20-30 Minutes</span></p>
+			<button>Got It</button>
+		</div>
+	</div>
+
 	<div class="slideshow active">
 	  <div class="slideshow-image"></div>
 	  <div class="slideshow-image"></div>
@@ -58,6 +74,9 @@
 
 	<div class="checkout" ondragover="detectDragOver(true);">
 		<div class="content" ondragover="event.stopPropagation(); detectDragOver(false);">
+			<div class="loadr">
+				<div class="loader"></div>
+			</div>
 			<div class="header">
 				<button class="close-btn"><i class="ion-close-round"></i></button> 
 				<img src="assets/images/main-logo.png" />
@@ -79,8 +98,6 @@
 						<button class="checkout-btn"><i class="ion-locked"></i>&nbsp;Check Out</button>
 					</div>
 				</div>
-
-
 				<!-- Check Out -->
 				<div class="checkout-section body-section body-section-1">
 					<h4>Order Summary &middot; <a class="edit-cart-btn" href="#">edit</a></h4>
@@ -88,28 +105,16 @@
 					<!-- Check Out Items -->
 					<div class="checkout-item-reel">
 
-						<div class="checkout-item">
-							<div class="checkout-item-quantity checkout-prop">2x</div>
-							<div class="checkout-item-name checkout-prop">Tofu Wrap</div>
-							<div class="checkout-item-price checkout-prop">$13.20</div>
-						</div>
-						<div class="divider"></div>
-						<div class="checkout-item">
-							<div class="checkout-item-quantity checkout-prop">2x</div>
-							<div class="checkout-item-name checkout-prop">Tofu Wrap</div>
-							<div class="checkout-item-price checkout-prop">$13.20</div>
-						</div>
-
-
 					</div>
 					<!-- =============== -->
+
 					<br />
 					<div class="footer">
 						<p class="margin-bottom"><span class="subtotal">Order</span><span class="subtotal-amount">$0.00</span></p>
 						<p class="margin-bottom"><span class="subtotal">Delivery</span><span class="float-right delivery-amount">$0.00</span></p>
 						<p class="margin-bottom"><span class="subtotal bold">Summary</span><span class="total-amount bold float-right">$0.00</span></p>
 						<p><span class="visa-acc"><img src="assets/images/visa-pic.png" />&nbsp;&middot;&middot;&middot;&middot;&middot;XX90</span><span class="float-right"><a href="#">change</a></span></p>
-						<button class="checkout-btn"><i class="ion-ios-cart"></i>&nbsp;Place Order</button>
+						<button class="pay-btn"><i class="ion-ios-cart"></i>&nbsp;Place Order</button>
 					</div>
 				</div>
 			</div>
@@ -878,6 +883,8 @@
 		</div>
 	</footer>
 
+	<!-- TEMPLATES -->
+
 	 <template id="template">
     	<div class="cart-item" draggable="true" ondragend="itemDropHandler(this);">
 			<div class="cart-item-quantity-select" onclick="quantitySelectHandle(event, this);">
@@ -928,6 +935,14 @@
 		</div>
     </template>
 
+    <template id="template-checkout-item">
+    	<div class="checkout-item">
+			<div class="checkout-item-quantity checkout-prop"></div>
+			<div class="checkout-item-name checkout-prop"></div>
+			<div class="checkout-item-price checkout-prop"></div>
+		</div>
+    </template>	
+
 	<!-- wrapper ends -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
@@ -955,31 +970,10 @@
 	<script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzB4QEH-YIMu5ZyRuOYebPMrYAGlYZodE&callback=initMap">
     </script>
-
- 
-    <!-- 
-
-	<div class="cart-item">
-		<div class="cart-item-quantity-select">
-			<div class="triangle"></div>
-			<div class="rectangle"></div>
-			<div class="circle-0"><i class="ion-minus-round"></i></div>
-			<div class="circle-1"><i class="ion-plus-round"></i></div>
-		</div>
-		<div class="cart-item-quantity cart-item-section">
-			<span>1x</span>
-		</div>
-		<div class="cart-item-name cart-item-section">
-			<span>Tangy Orange</span>
-		</div>
-		<div class="cart-item-price cart-item-section">
-			<span>$11.50</span>
-		</div>
-		<div class="cart-item-delete cart-item-section">
-			<div class="cart-item-delete-btn"><i class="ion-close-round"></i></div>
-		</div>
-	</div>
-
-    -->
+    <script>
+    	$(window).load(function() {
+    		$("#loading").fadeOut();
+    	});
+    </script>
 </body>
 </html>
